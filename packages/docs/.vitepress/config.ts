@@ -16,21 +16,35 @@ export default defineConfig({
                 ],
             },
             {
-                text : 'Installation',
+                text : 'Setup',
                 items: [
-                    {text: '🔧 - Installation', link: '/'},
+                    {text: '🔌 - Installation', link: '/installation'},
+                    {text: '🏢 - Organization', link: '/organization'},
+                    {text: '👥 - Users', link: '/users'},
+                    {
+                        text: '⚡ - Deploying Functions', link: '/deploying-functions', items: [
+                            {text: 'Dashboard', link: '/via-dashboard'},
+                            {text: 'CLI', link: '/via-cli'},
+                            {text: 'GitHub', link: '/via-github'},
+                        ],
+                    },
+                    {text: '🔐 - Production guidelines', link: '/production-guidelines'},
                 ],
             },
             {
                 text : 'Core',
                 items: [
-                    {text: '🔧 - CLI', link: '/'},
-                ],
+                    {text: '📬 - Queue', link: '/queue'},
+                    {text: '⌛ - Cronjob', link: '/cronjob'},
+                    {text: '📒 - Durable KV', link: '/durable-kv'},
+                ]
             },
             {
                 text : 'Advance',
                 items: [
+                    {text: '🔧 - CLI', link: '/cli'},
                     {text: '🎓 - From Single to HA', link: '/moving-from-single-to-ha'},
+                    {text: '📊 - Benchmarks  ', link: '/benchmarks'},
                 ],
             },
 

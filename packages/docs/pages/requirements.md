@@ -13,6 +13,8 @@ Check the [benchmark](./benchmarks.md) to see the differences.
 ## Services
 
 - S3 Compatible storage provider
+    - AWS S3
+    - R2
 - Database
     - MySQL
     - MariaDB
@@ -20,6 +22,8 @@ Check the [benchmark](./benchmarks.md) to see the differences.
     - MongoDB
     - SQL Server
 - Redis
+- Realtime Database
+    - Clickhouse
 
 ## Hardware
 
@@ -50,7 +54,8 @@ When deploying high-availability cluster version of `Edgeable` you'll separate t
 
 - _Notice that only the `Serverless` server is the one who is being horizontally scaled._
 - _In critical-application it's recommend to use managed versions of your selected database and redis, the
-reason for that is `Edgeable` is not aiming to deliver HA versions of them._
+  reason for that is `Edgeable` is not aiming to deliver HA versions of them._
 
 ## Docker Swarm & K8S.
+
 TBD

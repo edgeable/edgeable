@@ -5,5 +5,5 @@
 
 ---
 
-# Benchmarks
+# 📊 Benchmarks
 Let's talk numbers!
