@@ -1,22 +1,29 @@
+name: Publish Docs
+
 on:
   workflow_dispatch:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    runs-on: ubuntu-22.04
     name: Publish to Cloudflare Pages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install bun
         uses: oven-sh/setup-bun@v1
-      - name: Navigate to docs
-        run: cd packages/docs
       - name: Install dependencies
+        working-directory: ./packages/docs
         run: bun install
       - name: Build docs
+        working-directory: ./packages/docs
         run: bun run docs:build
       - name: Install Wrangler
         run: bun add --global wrangler
       - name: Push to Cloudflare
-        run: wrangler pages deploy ./.vitepress/dist --project-name=edgeable-docs
+        working-directory: ./packages/docs/.vitepress
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: wrangler pages deploy dist --project-name=edgeable-docs
