@@ -1,4 +1,5 @@
 # Edgeable
+
 _Current phase: **Idea**_
 
 Enterprise-grade Serverless edge "able" cloud function.
@@ -48,25 +49,25 @@ Other libraries in use in this stack:
 
 ## 🧰 Runtimes
 
-| Runtime               | Ready-to-use | Barebone | Priority |
-|-----------------------|--------------|----------|---------:|
-| JavaScript - **Bun**  |              |          |       10 |
-| JavaScript - **Node** |              |          |        9 |
-| JavaScript - **Deno** |              |          |        5 |
-| PHP - **RoadRunner**  |              |          |       10 |
-| PHP - **Swoole**      |              |          |        9 |
-| PHP - **FPM**         |              |          |        9 |
-| .NET                  |              |          |        7 |
-| Python                |              |          |        7 |
-| Dart                  |              |          |        7 |
-| Java / Kotlin         |              |          |        7 |
-| Go                    |              |          |        6 |
-| Rust                  |              |          |        6 |
-| Swift                 |              |          |        6 |
-| Ruby                  |              |          |        5 |
-| Perl                  |              |          |        5 |
-| Crystal               |              |          |        5 |
-| R                     |              |          |        3 |
+| Runtime               | RTU (RPS) | BB | Priority |
+|-----------------------|-----------|----|---------:|
+| JavaScript - **Bun**  |           |    |       10 |
+| JavaScript - **Node** |           |    |        9 |
+| JavaScript - **Deno** |           |    |        5 |
+| PHP - **RoadRunner**  |           |    |       10 |
+| PHP - **Swoole**      |           |    |        9 |
+| PHP - **FPM**         |           |    |        9 |
+| .NET                  |           |    |        7 |
+| Python                |           |    |        7 |
+| Dart                  |           |    |        7 |
+| Java / Kotlin         |           |    |        7 |
+| Go                    |           |    |        6 |
+| Rust                  |           |    |        6 |
+| Swift                 |           |    |        6 |
+| Ruby                  |           |    |        5 |
+| Perl                  |           |    |        5 |
+| Crystal               |           |    |        5 |
+| R                     |           |    |        3 |
 
 ## Ready-to-use (RTU) vs Barebone (BB)
 

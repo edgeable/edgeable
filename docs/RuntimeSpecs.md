@@ -8,4 +8,8 @@ This process is also necessary when you're introducing a breaking-change upgradi
 
 ## Runtime performance.
 
-TBD - Tests instructions
+Every runtime should provide two Docker images
+
+- RTU - Ready-To-Use
+- BB - Bare-Bone
+
