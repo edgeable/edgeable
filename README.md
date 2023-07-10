@@ -1,22 +1,25 @@
 # Edgeable
 
-_Current phase: **Idea**_
+> Current phase: 💡 **Idea**
 
-Enterprise-grade Serverless edge "able" cloud function.
+Enterprise-grade Serverless - "edge-able" - cloud function.
 
-With `Edgeable` you can easily deploy a cloud function to be executed over the edge. using `Edgeable` regularly can help with building request-intensive apps with Micro-servicing and separation of concerns in mind.
+With `Edgeable` you can easily deploy a cloud function to be executed over the edge.
+Using `Edgeable` regularly can help with building Request-Intensive-Applications (RIA) while adapting `micro-servicing` and `separation of concerns` mindsets.
 
-[Features](#-features) - [Packages](#-packages) - [Services](#-services-needed) - [Runtimes](#-runtimes) - [Ready to use & Barebone](#ready-to-use-rtu-vs-barebone-bb)
+[Features](#-features) - [Packages](#-packages) - [Services](#-services-needed) - [Runtimes](#-runtimes) - [Ready to use & Bare-bone](#ready-to-use-rtu-vs-bare-bone-bb)
 
 ## ⚡️ Features
 
-- High-availability and Scalability available by default.
-- Ready-to-use & Barebone Workers.
+- Single-node-instance (SNI) or High-availability-cluster (HAC). `Edgeable` can handle both.
+- Ready-to-use (RTU) & Bare-bone (BB) Workers.
 - Global durable KV Objects.
 - Live editor.
-- Queue.
+- Queue manager.
 - Cron job - scheduler.
 - Push to deploy.
+- Rate limiter.
+- Integrity check (CORS for web).
 - Uses Prisma ORM for a wide variety of DB engines.
 
 ## 🗄️ Packages
@@ -27,7 +30,8 @@ With `Edgeable` you can easily deploy a cloud function to be executed over the e
 | [Dashboard](./packages/dashboard)   | Frontend admin panel for manging:<br/>Organizations, Users and Functions.                                     | [Vue](https://vuejs.org/)                             |
 | [Runtimes](./packages/runtimes)     | List of docker containers - continuously optimized by the community - for running `Edgeable` cloud functions. | [Docker](https://www.docker.com/)                     |
 | [Serverless](./packages/serverless) | Request-hit endpoint, responsible for executing the current function.                                         | [Bun](https://bun.sh/)                                |
-| [Cli](./packages/cli)               | All-in-one admin management utility for deploying & testing of `Edgeable` functions.                          | [Inquirer.js](https://www.npmjs.com/package/inquirer) |
+| [CLI](./packages/cli)               | All-in-one admin management utility for deploying & testing of `Edgeable` functions.                          | [Inquirer.js](https://www.npmjs.com/package/inquirer) |
+| [Server CLI](./packages/server-cli) | Use to install your SNI installer or easily expand your HAC.                                                  | [Inquirer.js](https://www.npmjs.com/package/inquirer) |
 | [Shared](./packages/shared)         | Common shared models and application logic.                                                                   | [TypeScript](https://www.typescriptlang.org/)         |
 | [Docs](./packages/docs)             | Official `Edgeable` documentations.                                                                           | [VitePress](https://vitepress.dev/)                   |
 
@@ -69,7 +73,7 @@ Other libraries in use in this stack:
 | Crystal               |           |    |        5 |
 | R                     |           |    |        3 |
 
-## Ready-to-use (RTU) vs Barebone (BB)
+## Ready-to-use (RTU) vs Bare-bone (BB)
 
 When deploying function to `Edgeable` the deployment can be integrated into a RTU worker that enjoys all
 other `Edgeable` functionalities, Or, use a BB worker with 100% control over the worker.
@@ -133,7 +137,7 @@ graph TD
     S --> F(Fetching functions\nfile from S3\n\n)
 	F <-.-> S3
 	F -->R(Runtime)
-	R --> P[Barebone?]
+	R --> P[Bare-bone?]
 	P --> Yes
 	Yes --> Ex(Execute bin file e.g. php main.php)
 	P --> No

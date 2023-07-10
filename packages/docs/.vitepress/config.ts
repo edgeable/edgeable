@@ -47,7 +47,14 @@ export default defineConfig({
                     {text: '📊 - Benchmarks  ', link: '/benchmarks'},
                 ],
             },
-
+            {
+                text : 'Runtimes',
+                items: [
+                    {text: '🗃️ - Available runtimes', link: '/available-runtimes'},
+                    {text: '🚦 - Adding new runtime', link: '/adding-new-runtime'},
+                    {text: '🛠️ - Use custom runtimes', link: '/use-custom-runtimes'},
+                ],
+            },
         ],
 
         socialLinks: [

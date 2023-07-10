@@ -39,7 +39,7 @@ compose all the needed service into one config file.
 |:-----|---------|-------------| 
 | CPU  | 1       | 4           |
 | RAM  | 1GB     | 8GB         |
-| HDD  | 25GB    | 120GB       |
+| SDD  | 25GB    | 120GB       |
 
 ### High-availability instance
 
@@ -47,10 +47,10 @@ When deploying high-availability cluster version of `Edgeable` you'll separate t
 
 | Server     | Minimum                       | Recommended                    |
 |------------|-------------------------------|--------------------------------|
-| Database   | 4 `cpu` / 8 `ram` / 160 `hdd` | 8 `cpu` / 16 `ram` / 320 `hdd` |
-| Redis      | 2 `cpu` / 16 `ram` / 50 `hdd` | 4 `cpu` / 32 `ram` / 100 `hdd` |
-| Database   | 2 `cpu` / 4 `ram` / 160 `hdd` | 4 `cpu` / 8 `ram` / 160 `hdd`  |
-| Serverless | 1 `cpu` / 2 `ram` / 160 `hdd` | 8 `cpu` / 16 `ram` / 320 `hdd` |
+| Database   | 4 `cpu` / 8 `ram` / 160 `sdd` | 8 `cpu` / 16 `ram` / 320 `sdd` |
+| Redis      | 2 `cpu` / 16 `ram` / 50 `sdd` | 4 `cpu` / 32 `ram` / 100 `sdd` |
+| Database   | 2 `cpu` / 4 `ram` / 160 `sdd` | 4 `cpu` / 8 `ram` / 160 `sdd`  |
+| Serverless | 1 `cpu` / 2 `ram` / 160 `sdd` | 8 `cpu` / 16 `ram` / 320 `sdd` |
 
 - _Notice that only the `Serverless` server is the one who is being horizontally scaled._
 - _In critical-application it's recommend to use managed versions of your selected database and redis, the
