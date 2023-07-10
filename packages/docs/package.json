@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev ",
+    "docs:build": "vitepress build ",
+    "docs:preview": "vitepress preview "
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "postcss-rtl": "^2.0.0",
+    "sass": "^1.59.3",
+    "vitepress": "^1.0.0-alpha.60",
+    "vue": "^3.2.47"
+  }
+}
