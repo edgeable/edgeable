@@ -1,15 +1,22 @@
-# Edgeable
+<h1 align="center">Edgeable</h1>
+<p align="center"> <b>Enterprise grade</b> Serverless - edge able - cloud function.</p>
 
-> Current phase: 💡 **Idea**
+***
 
-Enterprise-grade Serverless - "edge-able" - cloud function.
 
 With `Edgeable` you can easily deploy a cloud function to be executed over the edge.
 Using `Edgeable` regularly can help with building Request-Intensive-Applications (RIA) while adapting `micro-servicing` and `separation of concerns` mindsets.
 
-[Features](#-features) - [Packages](#-packages) - [Services](#-services-needed) - [Runtimes](#-runtimes) - [Ready to use & Bare-bone](#ready-to-use-rtu-vs-bare-bone-bb)
+## Project status
 
-## ⚡️ Features
+|     Idea<br/>     | Alpha             | Beta              | RC                | Release           |
+|:-----------------:|-------------------|-------------------|-------------------|-------------------|
+| `version < 0.1.0` | `version < 0.2.0` | `version < 0.9.0` | `version < 1.0.0` | `version > 1.0.0` |
+|        💡         |                   |                   |                   |                   |
+
+[Features](#features) - [Packages](#-packages) - [Services](#-services-needed) - [Runtimes](#-runtimes) - [Ready to use & Bare-bone](#ready-to-use-rtu-vs-bare-bone-bb)
+
+## ⚡️Features
 
 - Single-node-instance (SNI) or High-availability-cluster (HAC). `Edgeable` can handle both.
 - Ready-to-use (RTU) & Bare-bone (BB) Workers.
@@ -24,16 +31,17 @@ Using `Edgeable` regularly can help with building Request-Intensive-Applications
 
 ## 🗄️ Packages
 
-| Package                             | What for                                                                                                      | Technologies                                          | 
-|-------------------------------------|---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------| 
-| [API](./packages/api)               | Admin API endpoints.<br/>To be used by the Dashboard, Cli and Webhook deployments.                            | [Bun](https://bun.sh/)                                |
-| [Dashboard](./packages/dashboard)   | Frontend admin panel for manging:<br/>Organizations, Users and Functions.                                     | [Vue](https://vuejs.org/)                             |
-| [Runtimes](./packages/runtimes)     | List of docker containers - continuously optimized by the community - for running `Edgeable` cloud functions. | [Docker](https://www.docker.com/)                     |
-| [Serverless](./packages/serverless) | Request-hit endpoint, responsible for executing the current function.                                         | [Bun](https://bun.sh/)                                |
-| [CLI](./packages/cli)               | All-in-one admin management utility for deploying & testing of `Edgeable` functions.                          | [Inquirer.js](https://www.npmjs.com/package/inquirer) |
-| [Server CLI](./packages/server-cli) | Use to install your SNI installer or easily expand your HAC.                                                  | [Inquirer.js](https://www.npmjs.com/package/inquirer) |
-| [Shared](./packages/shared)         | Common shared models and application logic.                                                                   | [TypeScript](https://www.typescriptlang.org/)         |
-| [Docs](./packages/docs)             | Official `Edgeable` documentations.                                                                           | [VitePress](https://vitepress.dev/)                   |
+| Package                                         | What for                                                                                                      | Technologies                                          | 
+|-------------------------------------------------|---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------| 
+| [API](./packages/api)                           | Admin API endpoints.<br/>To be used by the Dashboard, Cli and Webhook deployments.                            | [Bun](https://bun.sh/)                                |
+| [Dashboard](./packages/dashboard)               | Frontend admin panel for manging:<br/>Organizations, Users and Functions.                                     | [Vue](https://vuejs.org/)                             |
+| [Runtimes](./packages/runtimes)                 | List of docker containers - continuously optimized by the community - for running `Edgeable` cloud functions. | [Docker](https://www.docker.com/)                     |
+| [Serverless](./packages/serverless)             | Request-hit endpoint, responsible for executing the current function.                                         | [Bun](https://bun.sh/)                                |
+| [Containerization](./packages/containerization) | Wrapper for dealing with Docker, Docker Swarm mode & Remote Docker engine.                                    | [Inquirer.js](https://www.npmjs.com/package/inquirer) |
+| [CLI](./packages/cli)                           | All-in-one admin management utility for deploying & testing of `Edgeable` functions.                          | [Inquirer.js](https://www.npmjs.com/package/inquirer) |
+| [Server CLI](./packages/server-cli)             | Use to install your SNI installer or easily expand your HAC.                                                  | [Inquirer.js](https://www.npmjs.com/package/inquirer) |
+| [Shared](./packages/shared)                     | Common shared models and application logic.                                                                   | [TypeScript](https://www.typescriptlang.org/)         |
+| [Docs](./packages/docs)                         | Official `Edgeable` documentations.                                                                           | [VitePress](https://vitepress.dev/)                   |
 
 Other libraries in use in this stack:
 
@@ -70,7 +78,6 @@ Other libraries in use in this stack:
 | Swift                 |           |    |        6 |
 | Ruby                  |           |    |        5 |
 | Perl                  |           |    |        5 |
-| Crystal               |           |    |        5 |
 | R                     |           |    |        3 |
 
 ## Ready-to-use (RTU) vs Bare-bone (BB)
